@@ -1,0 +1,114 @@
+/* ===== Variabel warna & font ===== */
+:root{
+  --hijau-tua:#16352e;
+  --hijau-teks:#12302b;
+  --krem:#f5f2ea;
+  --amber:#d89324;
+  --abu:#7a8a86;
+  --garis:#cfcbc0;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'Sora',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--krem);color:var(--hijau-teks);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.rata-kanan-kiri{text-align:justify}
+
+.label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#b88a3e;font-weight:600;margin-bottom:.8rem}
+
+/* ===== Navigasi ===== */
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;
+  padding:1.4rem 4rem;color:#fff;border-bottom:1px solid rgba(255,255,255,.25);margin:0 2rem}
+.logo{font-family:var(--serif);font-size:1.5rem}
+.logo span{color:var(--amber)}
+.nav nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:2rem;font-size:.78rem;font-weight:600}
+.nav nav a:hover,.nav nav a.aktif{color:var(--amber)}
+
+/* ===== Hero (beranda) ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:6rem 6rem 4rem;color:#fff;
+  background:linear-gradient(90deg,rgba(22,53,46,.96) 0%,rgba(22,53,46,.82) 45%,rgba(22,53,46,.35) 100%),
+  url("images/hero.jpg") center/cover no-repeat,var(--hijau-tua)}
+.hero-isi{max-width:560px}
+.eyebrow{display:flex;align-items:center;gap:.8rem;color:var(--amber);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:1rem}
+.eyebrow::before{content:"";width:3rem;height:1px;background:var(--amber)}
+.hero h1{font-size:clamp(4rem,10vw,7.2rem);letter-spacing:-.02em}
+.hero h1 em{color:var(--amber);display:block}
+.hero-teks{margin:1.6rem 0 2rem;font-weight:300;font-size:.95rem;max-width:30rem;color:#e4ebe8}
+.tombol{display:inline-flex;align-items:center;gap:1.2rem;background:var(--amber);color:var(--krem);
+  padding:.85rem 1.6rem;border-radius:999px;font-weight:600;font-size:.82rem;transition:transform .2s}
+.tombol:hover{transform:translateX(4px)}
+.gulir{position:absolute;right:2rem;bottom:2rem;font-size:.65rem;color:#dfe7e4;padding-right:1rem;border-right:1px solid rgba(255,255,255,.5)}
+
+/* ===== Header halaman dalam ===== */
+.hero-mini{background:var(--hijau-tua);color:#fff;padding:8rem 6rem 3.5rem}
+.hero-mini h1{font-size:clamp(2.6rem,6vw,4.5rem);letter-spacing:-.01em}
+.hero-mini h1 em{color:var(--amber)}
+
+/* ===== Teks panjang ===== */
+.halaman{padding:4rem 6rem;max-width:64rem}
+.halaman h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1.2rem}
+.halaman h3{font-size:1.5rem;margin:1.8rem 0 .6rem}
+.halaman p{font-size:.9rem;margin-bottom:1.2rem;color:#33463f;text-align:justify}
+
+/* ===== Produk ===== */
+.terbaru{padding:4.5rem 4rem}
+.judul-baris{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.2rem}
+.terbaru h2{font-size:clamp(2.2rem,4vw,3.2rem)}
+.lihat{font-size:.78rem;font-weight:600;border-bottom:1px solid var(--hijau-teks);padding-bottom:.2rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.foto{position:relative;aspect-ratio:4/5;background-size:cover;background-position:center;background-color:#c9c3b3}
+.foto-1{background-image:url("images/produk1.jpg"),linear-gradient(160deg,#d9cdb5,#8d7f63)}
+.foto-2{background-image:url("images/produk2.jpg"),linear-gradient(160deg,#e3ddd0,#8b9690)}
+.foto-3{background-image:url("images/produk3.jpg"),linear-gradient(160deg,#c5ccd6,#566a7d)}
+.no{position:absolute;top:.8rem;left:.8rem;background:var(--krem);font-size:.62rem;padding:.2rem .7rem;border-radius:999px}
+.info{display:flex;justify-content:space-between;align-items:baseline;margin-top:.8rem}
+.info small{font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--abu)}
+.info b{font-size:.78rem}
+.produk h3{font-size:1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--garis);margin-top:.2rem}
+
+/* ===== Cerita ===== */
+.cerita{display:grid;grid-template-columns:1fr 1fr;background:#efe9da}
+.cerita-foto{position:relative;min-height:560px;background:url("images/cerita.jpg") center/cover,linear-gradient(160deg,#9aa6a2,#3b4a47)}
+.badge{position:absolute;left:0;bottom:1.5rem;background:var(--amber);font-size:.62rem;font-weight:600;padding:.4rem .9rem;border-radius:0 999px 999px 0}
+.cerita-teks{padding:4.5rem 4rem;max-width:620px}
+.cerita h2{font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:1.5rem}
+.cerita p{font-size:.84rem;margin-bottom:1.1rem;color:#33463f}
+.pembuka::first-letter{font-family:var(--serif);float:left;font-size:3.4rem;line-height:.85;padding:.25rem .5rem 0 0;color:var(--amber)}
+blockquote{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--garis);font-family:var(--serif);font-style:italic;font-size:1.1rem}
+
+/* ===== Tim ===== */
+.tim{background:var(--hijau-tua);color:#fff;padding:4.5rem 4rem}
+.tim h2{font-size:clamp(2.4rem,5vw,3.6rem);max-width:12ch;margin-bottom:1rem}
+.tim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;border:1px solid rgba(255,255,255,.3);padding:1.6rem}
+.orang{aspect-ratio:1/1.05;background-size:cover;background-position:center;background-color:#2b4a43;margin-bottom:.8rem}
+.o1{background-image:url("images/rofi.jpg"),linear-gradient(160deg,#d98d57,#1d1d24)}
+.o2{background-image:url("images/wisnu.jpg"),linear-gradient(160deg,#9fb6cf,#4c5b47)}
+.o3{background-image:url("images/astadina.jpg"),linear-gradient(160deg,#27407a,#0d1b3d)}
+.tim small{display:block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}
+figcaption{font-family:var(--serif);font-size:1.1rem;margin-top:.2rem}
+
+/* ===== Kontak ===== */
+.kontak-kartu{margin:0 6rem 4rem;max-width:64rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.kontak-kartu div{border:1px solid var(--garis);padding:1.2rem;font-size:.82rem}
+.kontak-kartu small{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#b88a3e;font-weight:600;margin-bottom:.3rem}
+
+footer{background:#0f2822;color:#9fb0ab;text-align:center;font-size:.68rem;padding:1.8rem 1rem}
+
+/* ===== Responsif ===== */
+@media (max-width:860px){
+  .nav{padding:1rem 1.2rem;margin:0 .8rem;flex-wrap:wrap;gap:.6rem}
+  .nav nav{position:static;transform:none;gap:1rem;font-size:.7rem;flex-wrap:wrap;order:3;width:100%}
+  .hero{padding:7rem 1.6rem 4rem}
+  .hero-mini{padding:9rem 1.6rem 2.5rem}
+  .halaman{padding:3rem 1.6rem}
+  .kontak-kartu{margin:0 1.6rem 3rem;grid-template-columns:1fr}
+  .terbaru,.tim{padding:3rem 1.6rem}
+  .grid,.tim-grid,.cerita{grid-template-columns:1fr}
+  .cerita-foto{min-height:320px}
+  .cerita-teks{padding:3rem 1.6rem}
+  .gulir{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tombol{transition:none}}
